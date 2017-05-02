@@ -1,8 +1,8 @@
 package com.test
 
-import grails.gorm.transactions.Rollback
-import grails.gorm.transactions.Transactional
 import grails.test.mixin.integration.Integration
+import org.springframework.test.annotation.Rollback
+import org.springframework.transaction.annotation.Transactional
 import spock.lang.Specification
 
 @Integration
