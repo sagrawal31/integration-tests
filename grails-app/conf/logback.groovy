@@ -22,6 +22,13 @@ appender('STDOUT', ConsoleAppender) {
     }
 }
 
+logger("com.test", DEBUG)
+
+List artifacts = ["conf", "interceptors", "services", "controllers", "domain", "init"]
+artifacts.each { artifact ->
+    logger("grails.app.${artifact}.com.test", DEBUG)
+}
+
 def targetDir = BuildSettings.TARGET_DIR
 if (Environment.isDevelopmentMode() && targetDir != null) {
     appender("FULL_STACKTRACE", FileAppender) {

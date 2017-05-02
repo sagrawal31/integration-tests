@@ -10,6 +10,7 @@ class UrlMappings {
         put "/$controller/$id(.$format)?"(action:"update")
         patch "/$controller/$id(.$format)?"(action:"patch")
 
+        "/api/mail/callback"(controller: "mail", action: "receive")
         "/"(controller: 'application', action:'index')
         "500"(view: '/error')
         "404"(view: '/notFound')
