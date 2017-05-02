@@ -1,13 +1,13 @@
 package com.test
 
-trait IntegrationTestHelper {
+import spock.lang.Specification
+
+abstract class IntegrationTestHelper extends Specification {
 
     User user1
     void basicSetup() {
-        User.withNewTransaction {
-            user1 = new User([email: "john@example.com", password: "test"])
-            user1.save(flush: true)
-        }
+        user1 = new User([email: "john@example.com", password: "test"])
+        user1.save(flush: true)
     }
 
     String mapToQueryString(Map params) {

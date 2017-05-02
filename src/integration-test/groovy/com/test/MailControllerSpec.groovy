@@ -1,16 +1,13 @@
 package com.test
 
+import grails.gorm.transactions.Rollback
 import grails.plugins.rest.client.RestBuilder
 import grails.test.mixin.integration.Integration
 import org.springframework.http.MediaType
-import org.springframework.test.annotation.Rollback
-import org.springframework.transaction.annotation.Transactional
-import spock.lang.Specification
 
 @Integration
 @Rollback
-@Transactional
-class MailControllerSpec extends Specification implements IntegrationTestHelper {
+class MailControllerSpec extends ControllerIntegrationTestHelper {
 
     def setup() {
     }

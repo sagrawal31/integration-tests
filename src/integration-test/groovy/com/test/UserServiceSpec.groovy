@@ -1,14 +1,11 @@
 package com.test
 
+import grails.gorm.transactions.Rollback
 import grails.test.mixin.integration.Integration
-import org.springframework.test.annotation.Rollback
-import org.springframework.transaction.annotation.Transactional
-import spock.lang.Specification
 
 @Integration
 @Rollback
-@Transactional
-class UserServiceSpec extends Specification implements IntegrationTestHelper {
+class UserServiceSpec extends IntegrationTestHelper {
 
     UserService userService
 
