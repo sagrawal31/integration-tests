@@ -1,6 +1,6 @@
 package com.test
 
-import grails.transaction.Transactional
+import grails.gorm.transactions.Transactional
 
 @Transactional
 class MailService {
