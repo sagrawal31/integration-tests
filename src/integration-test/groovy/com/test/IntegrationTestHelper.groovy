@@ -4,10 +4,10 @@ trait IntegrationTestHelper {
 
     User user1
     void basicSetup() {
-        //User.withNewTransaction {
+        User.withNewTransaction {
             user1 = new User([email: "john@example.com", password: "test"])
             user1.save(flush: true)
-        //}
+        }
     }
 
     String mapToQueryString(Map params) {
